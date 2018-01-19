@@ -6,3 +6,5 @@ Screenshots
 <img src="https://image.ibb.co/mAhj3b/2018_01_19_1516379884_1920x1080_scrot.png" alt="2018 01 19 1516379884 1920x1080 scrot" border="0" />
 
 <img src="https://image.ibb.co/eDhL9G/2018_01_19_1516387064_1920x1080_scrot.png" alt="2018_01_19_1516387064_1920x1080_scrot" border="0">
+
+<img src="https://image.ibb.co/efOoDb/2018_01_19_1516392814_1920x1080_scrot.png" alt="2018_01_19_1516392814_1920x1080_scrot" border="0">
