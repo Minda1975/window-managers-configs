@@ -1,0 +1,37 @@
+# This is a sample .ratpoisonrc file
+# Copyright (C) 2003, 2004 Shawn Betts
+#
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+
+# Set the prefix key to that of screen's default
+escape C-z
+
+# Overriding CTRL+z 'c' to start urxvtc instead of xterm
+bind c exec urxvtc
+
+#Multiple workspaces
+exec /usr/bin/rpws init 4 -k
+
+#Colors
+set fgcolor #C58917
+set bgcolor #000000
+
+#Menu
+definekey top s-F1 exec dmenu_run
+
+#Lock the screen
+definekey top s-F12 exec slock
+
+#Screenshots
+definekey top s-F2 exec scrot
+
+#Browser
+definekey top s-F3 exec firefox
+
+#Files
+definekey top s-F4 exec pcmanfm
+
+# Use the name of the program rather than the title in the window list
+defwinname name
+
