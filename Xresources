@@ -1,0 +1,137 @@
+! =====================================================================
+! XTerm stuff
+! =====================================================================
+! Default and menu font
+XTerm*font:  -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+! "Unreadable": Leave it actually unreadable.
+!XTerm*font1: -*-terminus-bold-r-*-*-20-*-*-*-*-*-*-*
+! "Tiny"
+XTerm*font2: -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+! "Small"
+XTerm*font3: -*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
+! "Medium"
+XTerm*font4: -*-terminus-bold-*-*-*-17-*-*-*-*-*-*-*
+! "Large"
+XTerm*font5: -*-terminus-bold-*-*-*-28-*-*-*-*-*-*-*
+! "Huge"
+XTerm*font6: -*-terminus-bold-*-*-*-32-*-*-*-*-*-*-*
+
+
+! VT Font Menu: Unreadable
+xterm*faceSize1: 8
+! VT font menu: Tiny
+xterm*faceSize2: 10
+! VT font menu: Medium
+xterm*faceSize3: 12
+! VT font menu: Large
+xterm*faceSize4: 16
+! VT font menu: Huge
+xterm*faceSize5: 22
+
+xterm*VT100.Translations: #override \
+    Ctrl <Key> minus: smaller-vt-font() \n\
+    Ctrl <Key> plus: larger-vt-font() \n\
+    Ctrl <Key> 0: set-vt-font(d)
+
+
+
+! Only select text
+xterm*highlightSelection: true
+! Remove trailing spaces
+! font settings --------------------------------------------------------------
+
+Xft.autohint: true
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+!Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+
+xterm*trimSelection: true
+
+! Lines of output that you can scroll back over
+xterm*saveLines: 4096
+! Turn the scrollbar on, and put it on the right
+xterm*scrollBar: false
+xterm*rightScrollBar: false
+
+! Do not scroll when there is new input e.g. tail -f /var/syslog
+xterm*scrollTtyOutput: false
+
+xterm*foreground: rgb:a8/a8/a8
+xterm*background: rgb:00/00/00
+
+xterm*color0: rgb:00/00/00
+xterm*color1: rgb:a8/00/00
+xterm*color2: rgb:00/a8/00
+xterm*color3: rgb:a8/54/00
+xterm*color4: rgb:00/00/a8
+xterm*color5: rgb:a8/00/a8
+xterm*color6: rgb:00/a8/a8
+xterm*color7: rgb:a8/a8/a8
+xterm*color8: rgb:54/54/54
+xterm*color9: rgb:fc/54/54
+xterm*color10: rgb:54/fc/54
+xterm*color11: rgb:fc/fc/54
+xterm*color12: rgb:54/54/fc
+xterm*color13: rgb:fc/54/fc
+xterm*color14: rgb:54/fc/fc
+xterm*color15: rgb:fc/fc/fc
+
+! urxvt -------------------------------------------
+
+URxvt.font:            xft:Terminus:size=12:autohint=false:antialias=true:hinting=true:style=regular
+URxvt.boldFont:        xft:Terminus:size=12:bold:autohint=true:antialias=true:hinting=true:style=regular
+URxvt.italicFont:      xft:Terminus:italic:size=12:autohint=true:style=regular
+URxvt.boldItalicFont:  xft:Terminus:bold:italic:size=12:autohint=true:style=regul
+
+! Window size and position
+!URxvt*geometry: 60x22+50+100
+! Window size, let the Window Manager position it
+URxvt.geometry: 80x28
+
+URxvt.scrollstyle: plain
+URxvt.scrollBar: true
+URxvt.scrollBar_right: true
+
+! scrollback buffer lines - 65535 is max (64 is default)
+URxvt.saveLines:16384
+
+
+! Clickble URLs
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/chromium
+URxvt.matcher.button: 3
+
+
+
+
+! Colors taken from http://ezyang.scripts.mit.edu/blog/2010/01/rxvt-unicode-for-gnome-terminal-refugees/
+URxvt*background: black
+URxvt*foreground: white
+! black
+URxvt*color0  : #2E3436
+URxvt*color8  : #555753
+! red
+URxvt*color1  : #CC0000
+URxvt*color9  : #EF2929
+! green
+URxvt*color2  : #4E9A06
+URxvt*color10 : #8AE234
+! yellow
+URxvt*color3  : #C4A000
+URxvt*color11 : #FCE94F
+! blue
+URxvt*color4  : #3465A4
+URxvt*color12 : #729FCF
+! magenta
+URxvt*color5  : #75507B
+URxvt*color13 : #AD7FA8
+! cyan
+URxvt*color6  : #06989A
+URxvt*color14 : #34E2E2
+! white
+URxvt*color7  : #D3D7CF
+URxvt*color15 : #EEEEEC
