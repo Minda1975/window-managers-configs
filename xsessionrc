@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Load resources
+
+xrdb -merge .Xresources
+
+export GTK_OVERLAY_SCROLLING=0
+# Fire up apps
+nitrogen --restore &
+gxkb &
+volumeicon &
+tint2 &
+compton -b -c &
+
+if [ -x /usr/bin/nm-applet ] ; then
+   nm-applet --sm-disable &
+fi
+
+exec openbox-session
