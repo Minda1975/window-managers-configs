@@ -5,33 +5,13 @@
 # are permitted in any medium without royalty provided the copyright
 
 # Set the prefix key to that of screen's default
+set bgcolor #461B7E
+set fgcolor #E3E4FA
+set border 0 
+set padding 0 0 0 0
+set barpadding 0 0 
+exec rpws init 4 -a -k
 escape C-z
+source .ratpoisonkeys
 
-# Overriding CTRL+z 'c' to start urxvtc instead of xterm
-bind c exec urxvtc
-
-#Multiple workspaces
-exec /usr/bin/rpws init 4 -k
-
-#Colors
-set fgcolor #C58917
-set bgcolor #000000
-
-#Menu
-definekey top s-F1 exec dmenu_run
-
-#Lock the screen
-definekey top s-F12 exec slock
-
-#Screenshots
-definekey top s-F2 exec scrot
-
-#Browser
-definekey top s-F3 exec firefox
-
-#Files
-definekey top s-F4 exec pcmanfm
-
-# Use the name of the program rather than the title in the window list
-defwinname name
 
