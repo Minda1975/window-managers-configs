@@ -1,0 +1,34 @@
+definekey top s-Up       focusup
+definekey top s-Down  focusdown
+definekey top s-Left      focusleft
+definekey top s-Right   focusright
+
+definekey top s-h    hsplit
+definekey top s-v    vsplit
+definekey top s-H    hsplit 2/3
+definekey top s-V    vsplit 2/3
+definekey top s-c    next
+definekey top s-p    prev
+definekey top s-r   remove
+definekey top s-R    resize
+definekey top s-u    undo
+
+definekey top s-semicolon  colon
+definekey top s-slash      help root
+definekey top s-question   help top
+
+definekey top s-t    exec sakura
+
+definekey top s-C-Q    quit
+definekey top s-C-r    restart
+definekey top s-C-s source .ratpoisonkeys
+
+newkmap   super-x
+definekey super-x d      exec ~/.scripts/rat_info.sh
+definekey super-x w        exec chromium
+definekey super-x W        exec pcmanfm
+definekey super-x f        exec xtrlock
+definekey super-x e        exec geany
+definekey super-x v     exec audacious
+definekey top s-F2 exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/RAT_screenshots && mv $f ~/Pictures/RAT_screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/RAT_screenshots/`ls -1 -t ~/Pictures/RAT_screenshots | head -1`' # All screens
+definekey top     s-x     readkey super-x
