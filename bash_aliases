@@ -13,7 +13,6 @@ alias j='jobs -l'
 alias which='type -a'
 alias du='du -kh'    # Makes a more readable output.
 alias df='df -kTh'
-alias music='ncmpcpp'
-alias up='sudo apt-get update'
-alias upg='sudo apt-get upgrade'
-alias dp='sudo apt-get dist-upgrade'
+alias music='cmus'
+alias slurm='slurm -i enp8s0'
+
