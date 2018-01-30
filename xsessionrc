@@ -6,14 +6,13 @@ xrdb -merge .Xresources
 
 export GTK_OVERLAY_SCROLLING=0
 # Fire up apps
-nitrogen --restore &
-gxkb &
-volumeicon &
-tint2 &
-compton -b -c &
+xloadimage -onroot -quiet /home/mindaugas/Pictures/blur.jpeg &
+xsetroot -cursor_name left_ptr &
+xautolock -time 10 -locker 'xtrlock' &
+setxkbmap -layout "us,lt,ru" -option "grp:alt_shift_toggle" &
 
 if [ -x /usr/bin/nm-applet ] ; then
    nm-applet --sm-disable &
 fi
 
-exec openbox-session
+exec ratpoison
