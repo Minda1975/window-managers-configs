@@ -6,6 +6,6 @@ Screenshots
 
 <a href='https://postimg.org/image/xztbei0ix/' target='_blank'><img src='https://s20.postimg.org/xaaj24zzh/2018-02-09-185036_1920x1080_scrot.png' border='0' alt='2018-02-09-185036_1920x1080_scrot'/></a>
 
-<img src="https://image.ibb.co/eDhL9G/2018_01_19_1516387064_1920x1080_scrot.png" alt="2018_01_19_1516387064_1920x1080_scrot" border="0">
+<a href='https://postimg.org/image/5bkyoxvfd/' target='_blank'><img src='https://s20.postimg.org/kx2a8w7dp/2018-02-09-185107_1920x1080_scrot.png' border='0' alt='2018-02-09-185107_1920x1080_scrot'/></a>
 
-<img src="https://image.ibb.co/efOoDb/2018_01_19_1516392814_1920x1080_scrot.png" alt="2018_01_19_1516392814_1920x1080_scrot" border="0">
+
