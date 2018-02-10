@@ -1,6 +1,25 @@
-! =====================================================================
-! XTerm stuff
-! =====================================================================
+xterm*faceName: DejaVu Sans Mono
+xterm*faceSize: 12
+xterm*renderFont: true
+
+
+! VT Font Menu: Unreadable
+xterm*faceSize1: 8
+! VT font menu: Tiny
+xterm*faceSize2: 10
+! VT font menu: Medium
+xterm*faceSize3: 12
+! VT font menu: Large
+xterm*faceSize4: 16
+! VT font menu: Huge
+xterm*faceSize5: 22
+
+xterm*VT100.Translations: #override \
+    Ctrl <Key> minus: smaller-vt-font() \n\
+    Ctrl <Key> plus: larger-vt-font() \n\
+    Ctrl <Key> 0: set-vt-font(d)
+
+
 
 ! Only select text
 xterm*highlightSelection: true
@@ -16,27 +35,121 @@ Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
 
 
-XTerm*vt100.utf8: true
-XTerm*bellIsUrgent: true
-XTerm*visualBell: true
-XTerm*visualBellLine: true
-XTerm*eightBitInput: false
-XTerm*scrollBar: false
-XTerm*vt100.toolBar: false
-XTerm*vt100.allowBoldFonts: true
-XTerm*vt100.background: black
-XTerm*vt100.foreground: grey80
-XTerm*vt100.cursorColor: #ff7a7a
-XTerm*vt100.faceName: Monospace
-!XTerm*vt100.font: -*-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-1
-XTerm*vt100.faceSize: 12
-XTerm*vt100.faceNameDoublesize: VL Gothic
-XTerm*vt100.deleteIsDEL: true
-!XTerm*vt100.faceSize: 12
-!XTerm*vt100.faceName: unifont
-XTerm*termName: xterm-256color
-XTerm*charClass: 33:48,35-38:48,39:43,42-47:48,58-59:48,61:48,63-64:48,126:48
+xterm*trimSelection: true
+
+! Lines of output that you can scroll back over
+xterm*saveLines: 4096
+! Turn the scrollbar on, and put it on the right
+xterm*scrollBar: false
+xterm*rightScrollBar: false
+
+! Do not scroll when there is new input e.g. tail -f /var/syslog
+xterm*scrollTtyOutput: false
 
 
+!!Colors
+
+xterm*background: #03090A
+xterm*foreground: #90d9d5
+xterm*cursorColor: #90d9d5
+
+!Black
+xterm*color0:    #03090A
+xterm*color8:    #649795
+
+!Red
+xterm*color1:    #2FA154
+xterm*color9:    #2FA154
+
+!Green
+xterm*color2:    #129E61
+xterm*color10:    #129E61
+
+!yellow
+xterm*color3:    #21D272
+xterm*color11:    #21D272
+
+!blue
+xterm*color4:    #0A1E96
+xterm*color12:    #0A1E96
+
+!Magenta
+xterm*color5:    #265EBC
+xterm*color13:    #265EBC
+
+!Cyan
+xterm*color6:    #C559DF
+xterm*color14:    #C559DF
+
+!White
+xterm*color7:    #90d9d5
+xterm*color15:    #90d9d5
+
+
+! urxvt -------------------------------------------
+
+URxvt.font: xft:Monospace:size=11
+URxvt.boldFont: xft:Monospace:Bold:size=11
+URxvt.letterSpace: -2
+! Add fallback fonts as laid out in `man 1 urxvt` under "font:" in the RESOURCES section
+
+! Window size and position
+!URxvt*geometry: 60x22+50+100
+! Window size, let the Window Manager position it
+URxvt.geometry: 80x28
+
+URxvt.scrollstyle: plain
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+
+! scrollback buffer lines - 65535 is max (64 is default)
+URxvt.saveLines:16384
+
+
+! Clickble URLs
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/chromium
+URxvt.matcher.button: 3
+
+URxvt*.foreground:  ##90d9d5
+URxvt*.background:   #03090A
+URxvt*.cursorColor: #90d9d5
+!
+!Black
+URxvt*color0:	#03090A
+URxvt*color8:	#649795
+
+!Red
+URxvt*color1:	#2FA154
+URxvt*color9:	#2FA154
+
+!Green
+URxvt*color2:	#129E61
+URxvt*color10:	#129E61
+
+!Yellow
+URxvt*color3:	#21D272
+URxvt*color11:	#21D272
+
+!Blue
+URxvt*color4:	#0A1E96
+URxvt*color12:	#0A1E96
+
+!Magenta
+URxvt*color5:	#265EBC
+URxvt*color13:	#265EBC
+
+!Cyan
+URxvt*color6:	#C559DF
+URxvt*color14:	#C559DF
+
+!White
+URxvt*color7:	#90d9d5
+URxvt*color15:	#90d9d5
+!
+! Bold, Italic, Underline
+URxvt*.colorBD:     #845a5e
+!*.colorIT:
+!*.colorUL:
 
 
