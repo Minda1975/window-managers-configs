@@ -79,7 +79,7 @@ myManageHook = scratchpadManageHook (W.RationalRect 0.25 0.375 0.5 0.35) <+> ( c
                 , className =? "Gimp"           --> doShift "9:pic"
                 , className =? "Links"           --> doShift "2:web"
                 , className =? "Geany"           --> doShift "3:code"
-                , className =? "Chromium"           --> doShift "2:web"
+                , className =? "Firefox"           --> doShift "2:web"
                 , className =? "smplayer"	--> doShift "8:vid"
 		, className =? "Audacious"	--> doShift "6:music"
 		, className =? "Leafpad" 		--> doShift "4:paper"]
@@ -247,7 +247,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     --Programs
     , ((modMask .|.  shiftMask, xK_u ), spawn "pcmanfm")
     , ((modMask .|.  shiftMask, xK_p ), spawn "audacious")
-    , ((modMask .|.  shiftMask, xK_b ), spawn "chromium")
+    , ((modMask .|.  shiftMask, xK_b ), spawn "xlinks2")
     , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
     , ((0, xK_Print), spawn "scrot")
  
