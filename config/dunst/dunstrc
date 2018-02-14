@@ -182,7 +182,7 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#26282B"
-    foreground = "#CECFD1"
+    foreground = "#4AA02C"
     timeout = 5
 
 [urgency_normal]
@@ -190,12 +190,12 @@
     #foreground = "#CECFD1"
     #background = "#26282B"
     background = #333333
-    foreground = "#CECFD1"
+    foreground = "#E56717"
     timeout = 5
 
 [urgency_critical]
     background = "#26282B"
-    foreground = "#CECFD1"
+    foreground = "#E42217"
     timeout = 0
 
 
