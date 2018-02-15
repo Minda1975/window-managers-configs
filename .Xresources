@@ -1,5 +1,5 @@
-xterm*faceName: DejaVu Sans Mono
-xterm*faceSize: 12
+xterm*faceName: Share-TechMonoTrue
+xterm*faceSize: 10
 xterm*renderFont: true
 
 
@@ -88,8 +88,8 @@ xterm*color15:    #90d9d5
 
 ! urxvt -------------------------------------------
 
-URxvt.font: xft:Monospace:size=11
-URxvt.boldFont: xft:Monospace:Bold:size=11
+URxvt.font: xft:Fira Mono:size=10
+URxvt.boldFont: xft:Fira Mono:Bold:size=10
 URxvt.letterSpace: -2
 ! Add fallback fonts as laid out in `man 1 urxvt` under "font:" in the RESOURCES section
 
