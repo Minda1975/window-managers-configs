@@ -1,0 +1,164 @@
+xterm*faceName: SauceCodePro Nerd Font Mono
+xterm*faceSize: 10
+xterm*renderFont: true
+
+
+! VT Font Menu: Unreadable
+xterm*faceSize1: 8
+! VT font menu: Tiny
+xterm*faceSize2: 10
+! VT font menu: Medium
+xterm*faceSize3: 12
+! VT font menu: Large
+xterm*faceSize4: 16
+! VT font menu: Huge
+xterm*faceSize5: 22
+
+xterm*VT100.Translations: #override \
+    Ctrl <Key> minus: smaller-vt-font() \n\
+    Ctrl <Key> plus: larger-vt-font() \n\
+    Ctrl <Key> 0: set-vt-font(d)
+
+
+
+! Only select text
+xterm*highlightSelection: true
+! Remove trailing spaces
+! font settings --------------------------------------------------------------
+
+Xft.autohint: true
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+!Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+
+xterm*trimSelection: true
+
+! Lines of output that you can scroll back over
+xterm*saveLines: 4096
+! Turn the scrollbar on, and put it on the right
+xterm*scrollBar: false
+xterm*rightScrollBar: false
+
+! Do not scroll when there is new input e.g. tail -f /var/syslog
+xterm*scrollTtyOutput: false
+
+!!Colors
+
+xterm*background: #03090A
+xterm*foreground: #90d9d5
+xterm*cursorColor: #90d9d5
+
+!Black
+xterm*color0:    #03090A
+xterm*color8:    #649795
+
+!Red
+xterm*color1:    #2FA154
+xterm*color9:    #2FA154
+
+!Green
+xterm*color2:    #129E61
+xterm*color10:    #129E61
+
+!yellow
+xterm*color3:    #21D272
+xterm*color11:    #21D272
+
+!blue
+xterm*color4:    #0A1E96
+xterm*color12:    #0A1E96
+
+!Magenta
+xterm*color5:    #265EBC
+xterm*color13:    #265EBC
+
+!Cyan
+xterm*color6:    #C559DF
+xterm*color14:    #C559DF
+
+!White
+xterm*color7:    #90d9d5
+xterm*color15:    #90d9d5
+
+
+
+
+
+
+! urxvt -------------------------------------------
+
+URxvt.font: xft:SauceCodePro Nerd Font Mono:size=10 :antialias=true:autohint=false
+URxvt.boldFont: xft:SauceCodePro Nerd Font Mono:Bold:size=10 :antialias=true:autohint=false
+
+! Add fallback fonts as laid out in `man 1 urxvt` under "font:" in the RESOURCES section
+
+! Window size and position
+!URxvt*geometry: 60x22+50+100
+! Window size, let the Window Manager position it
+URxvt.geometry: 80x28
+
+URxvt.scrollBar: false
+
+! scrollback buffer lines - 65535 is max (64 is default)
+URxvt.saveLines:8192
+
+
+! Clickble URLs
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/chromium
+URxvt.matcher.button: 3
+
+! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
+
+! Project:    Nord XResources
+! Version:    0.1.0
+! Repository: https://github.com/arcticicestudio/nord-xresources
+! License:    MIT
+
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
+
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
+
+
+
