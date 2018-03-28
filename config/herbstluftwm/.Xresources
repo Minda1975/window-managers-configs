@@ -1,0 +1,156 @@
+!!! Fonts
+xterm*font: -*-terminus-*-*-*-*-*-*-*-*-*-*-iso10646-*
+xterm*boldFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-iso10646-*
+xterm*italicFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-iso10646-*
+
+
+
+! VT Font Menu: Unreadable
+xterm*faceSize1: 8
+! VT font menu: Tiny
+xterm*faceSize2: 10
+! VT font menu: Medium
+xterm*faceSize3: 12
+! VT font menu: Large
+xterm*faceSize4: 16
+! VT font menu: Huge
+xterm*faceSize5: 22
+
+xterm*VT100.Translations: #override \
+    Ctrl <Key> minus: smaller-vt-font() \n\
+    Ctrl <Key> plus: larger-vt-font() \n\
+    Ctrl <Key> 0: set-vt-font(d)
+
+
+
+! Only select text
+xterm*highlightSelection: true
+! Remove trailing spaces
+! font settings --------------------------------------------------------------
+
+Xft.autohint: true
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+!Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+
+xterm*trimSelection: true
+
+! Lines of output that you can scroll back over
+xterm*saveLines: 4096
+! Turn the scrollbar on, and put it on the right
+xterm*scrollBar: true
+xterm*rightScrollBar: true
+
+! Do not scroll when there is new input e.g. tail -f /var/syslog
+xterm*scrollTtyOutput: false
+
+!Theme Seventeen
+xterm*background: rgb:00/00/00
+xterm*foreground: rgb:e5/e5/e5
+xterm*color0:     rgb:00/00/00
+xterm*color1:     rgb:ff/00/00
+xterm*color2:     rgb:00/ff/00
+xterm*color3:     rgb:ff/ff/00
+xterm*color4:     rgb:00/00/ff
+xterm*color5:     rgb:ff/00/ff
+xterm*color6:     rgb:00/ff/ff
+xterm*color7:     rgb:ff/ff/ff
+xterm*color8:     rgb:ff/d3/9b
+xterm*color9:     rgb:ff/82/47
+xterm*color10:    rgb:ff/82/ab
+xterm*color11:    rgb:87/ce/fa
+xterm*color12:    rgb:ff/ff/ff
+xterm*color13:    rgb:ff/ff/ff
+xterm*color14:    rgb:ff/ff/ff
+xterm*color15:    rgb:ff/ff/ff
+
+
+
+
+
+
+
+
+
+
+
+! urxvt -------------------------------------------
+
+URxvt.font: xft:Whois:size=10 :antialias=true:autohint=false
+URxvt.boldFont: xft:Whois:Bold:size=10 :antialias=true:autohint=false
+
+! Add fallback fonts as laid out in `man 1 urxvt` under "font:" in the RESOURCES section
+
+! Window size and position
+!URxvt*geometry: 60x22+50+100
+! Window size, let the Window Manager position it
+URxvt.geometry: 80x28
+
+URxvt.scrollBar: false
+
+! scrollback buffer lines - 65535 is max (64 is default)
+URxvt.saveLines:8192
+URxvt.scaleHeight: 0.9
+
+! Clickble URLs
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/chromium
+URxvt.matcher.button: 3
+
+
+
+!Theme Seventeen
+URxvt*background: rgb:00/00/00
+URxvt*foreground: rgb:e5/e5/e5
+URxvt*color0:     rgb:00/00/00
+URxvt*color1:     rgb:ff/00/00
+URxvt*color2:     rgb:00/ff/00
+URxvt*color3:     rgb:ff/ff/00
+URxvt*color4:     rgb:00/00/ff
+URxvt*color5:     rgb:ff/00/ff
+URxvt*color6:     rgb:00/ff/ff
+URxvt*color7:     rgb:ff/ff/ff
+URxvt*color8:     rgb:ff/d3/9b
+URxvt*color9:     rgb:ff/82/47
+URxvt*color10:    rgb:ff/82/ab
+URxvt*color11:    rgb:87/ce/fa
+URxvt*color12:    rgb:ff/ff/ff
+URxvt*color13:    rgb:ff/ff/ff
+URxvt*color14:    rgb:ff/ff/ff
+URxvt*color15:    rgb:ff/ff/ff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
