@@ -5,9 +5,16 @@
 # are permitted in any medium without royalty provided the copyright
 
 # Set the prefix key to that of screen's default
-set font "Anonymous Pro-11"
-set bgcolor #312e39
-set fgcolor #c0a79a
+set winname title
+set winfmt %n %s %t
+set bgcolor black
+set fgcolor #4ca04c
+msgwait 3
+set font -*-fixed-*-*-*-*-9-*-*-*-*-*-*-*
+set winliststyle column
+rudeness 12
+warp on
+addhook key banish
 set border 0 
 set padding 0 0 0 0
 set barpadding 0 0 
