@@ -1,7 +1,11 @@
+
+startup_message off
 set winname title
 set winfmt %n %s %t
 msgwait 3
 set font "Monospace-8"
+set fgcolor orange
+set bgcolor black
 set winliststyle column
 rudeness 12
 warp on
@@ -11,9 +15,12 @@ set padding 0 0 0 0
 set barpadding 0 0 
 exec rpws init 4 -a -k
 escape C-z
+bind c exec urxvtc
 definekey top s-F1 exec ~/.scripts/shutdown.sh
 definekey top s-F2 exec ~/.scripts/mpdmenu
 definekey top s-F3 exec ~/.scripts/dmenu_fm
 definekey top s-F4 exec ~/.scripts/screenshot
 definekey top s-F5 exec ~/.scripts/select-screenshot
 definekey top s-F6 exec urxvt -e /usr/bin/mc
+definekey top s-w exec ~/.scripts/ratpoison-interactive-window-list.pl
+
