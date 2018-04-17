@@ -22,5 +22,6 @@ definekey top s-F3 exec ~/.scripts/dmenu_fm
 definekey top s-F4 exec ~/.scripts/screenshot
 definekey top s-F5 exec ~/.scripts/select-screenshot
 definekey top s-F6 exec urxvt -e /usr/bin/mc
+definekey top s-F7 exec firefox
 definekey top s-w exec ~/.scripts/ratpoison-interactive-window-list.pl
 
