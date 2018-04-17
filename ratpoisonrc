@@ -1,16 +1,7 @@
-# This is a sample .ratpoisonrc file
-# Copyright (C) 2003, 2004 Shawn Betts
-#
-# Copying and distribution of this file, with or without modification,
-# are permitted in any medium without royalty provided the copyright
-
-# Set the prefix key to that of screen's default
 set winname title
 set winfmt %n %s %t
-set bgcolor black
-set fgcolor #4ca04c
 msgwait 3
-set font -*-fixed-*-*-*-*-9-*-*-*-*-*-*-*
+set font "Monospace-8"
 set winliststyle column
 rudeness 12
 warp on
@@ -20,6 +11,9 @@ set padding 0 0 0 0
 set barpadding 0 0 
 exec rpws init 4 -a -k
 escape C-z
-source .ratpoisonkeys
-
-
+definekey top s-F1 exec ~/.scripts/shutdown.sh
+definekey top s-F2 exec ~/.scripts/mpdmenu
+definekey top s-F3 exec ~/.scripts/dmenu_fm
+definekey top s-F4 exec ~/.scripts/screenshot
+definekey top s-F5 exec ~/.scripts/select-screenshot
+definekey top s-F6 exec urxvt -e /usr/bin/mc
