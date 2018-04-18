@@ -8,11 +8,6 @@ export GTK_OVERLAY_SCROLLING=0
 # Fire up apps
 xsetroot -cursor_name left_ptr &
 xsetroot  -mod 22 22 -bg "#050505" -fg "#422a03" &
-urxvtd -q -f -o &
 setxkbmap -layout "us,lt,ru" -option "grp:ctrl_alt_toggle" &
-
-if [ -x /usr/bin/nm-applet ] ; then
-   nm-applet --sm-disable &
-fi
 
 exec ratpoison
