@@ -13,9 +13,8 @@ addhook key banish
 set border 0 
 set padding 0 0 0 0
 set barpadding 0 0 
-exec rpws init 4 -a -k
 escape C-z
-bind c exec urxvtc
+bind c exec urxvt
 definekey top s-F1 exec ~/.scripts/shutdown.sh
 definekey top s-F2 exec ~/.scripts/mpdmenu
 definekey top s-F3 exec ~/.scripts/dmenu_fm
@@ -24,4 +23,5 @@ definekey top s-F5 exec ~/.scripts/select-screenshot
 definekey top s-F6 exec urxvt -e /usr/bin/mc
 definekey top s-F7 exec firefox
 definekey top s-w exec ~/.scripts/ratpoison-interactive-window-list.pl
+exec urxvt -e bash -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME"
 
