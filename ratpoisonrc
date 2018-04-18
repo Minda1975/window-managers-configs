@@ -1,10 +1,13 @@
 
 startup_message off
+set wingravity n 
+set transgravity center
+set bargravity nw
 set winname title
 set winfmt %n %s %t
 msgwait 3
 set font "Monospace-8"
-set fgcolor orange
+set fgcolor blue
 set bgcolor black
 set winliststyle column
 rudeness 12
