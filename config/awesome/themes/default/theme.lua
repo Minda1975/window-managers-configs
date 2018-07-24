@@ -5,7 +5,7 @@
 local theme = {}
 
 theme.font          = "Meslo LG S DZ Bold 10"
-theme.taglist_font 	= "Meslo LG S DZ Bold 10"
+theme.taglist_font  = "Xirod 10"
 theme.tasklist_font = "Input Sans 10"
 
 theme.bg_normal     = "#222222"
