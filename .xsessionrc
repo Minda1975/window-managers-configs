@@ -1,13 +1,19 @@
 #!/bin/bash
 
 # Load resources
-
 xrdb -merge .Xresources
 
-export GTK_OVERLAY_SCROLLING=0
-# Fire up apps
-xsetroot -cursor_name left_ptr &
-xsetroot  -mod 22 22 -bg "#050505" -fg "#422a03" &
-setxkbmap -layout "us,lt,ru" -option "grp:ctrl_alt_toggle" &
+#Status bar
+   while true; do
+    xsetroot -name "Memory $(free -m | grep '^Mem' | awk '{print "total: " $2 "MB used: " $3"MB"}') | Now playing: $(mpc current | tr -d '(:[:digit:])') | Uptime: $(uptime | awk '{print $3}' | tr -d ',') | $( date +"%F %R" )"
+    sleep 5s
+done &
+     
+#Apps
+setxkbmap -layout "us,lt,ru" -option "grp:ctrl_shift_toggle"
+hsetroot -fill ~/.milky.jpg
+xsettingsd &
+dunst &
+xautolock -time 10 -locker 'slock' &
 
-exec ratpoison
+exec dwm
