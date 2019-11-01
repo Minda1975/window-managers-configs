@@ -1,0 +1,9 @@
+# Turn off the welcome message
+startup_message off
+
+# Disable visual bell
+vbell off
+
+# Customize the status line
+hardstatus alwayslastline
+hardstatus alwayslastline '%{= G}[ %{G}%H %{g}][%= %{= w}%?%-Lw%?%{= R}%n*%f %t%?%{= R}(%u)%?%{= w}%+Lw%?%= %{= g}][ %{y}Load: %l %{g}][%{B}%Y-%m-%d %{W}%c:%s %{g}]'

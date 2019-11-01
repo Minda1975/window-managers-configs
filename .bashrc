@@ -111,6 +111,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-PATH="${PATH}:${HOME}/.local/bin/"
 
-export PS1='\n  \[\e[0;36m\]\W\[\e[m\] \[\e[1;31m\]■:\[\e[m\] '
+export PS1='
+[\u@\h:\l|\W]    
+[#\#] \$ '
+
+
+source ~/.mpc-completion.bash
