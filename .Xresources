@@ -1,0 +1,52 @@
+
+
+URxvt*termName: screen-256color
+URxvt*loginShell: true
+URxvt*scrollColor: #777777
+URxvt*scrollstyle: plain
+URxvt*scrollTtyKeypress: true
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: false
+URxvt*secondaryScreen: true
+URxvt*secondaryScroll: true
+URxvt*skipScroll: true
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*scrollBar_floating: false
+URxvt*fading: 30
+URxvt*utmpInhibit: false
+URxvt*urgentOnBell: false
+URxvt*visualBell: true
+URxvt*mapAlert: true
+URxvt*mouseWheelScrollPage: false
+URxvt*background: Black
+URxvt*foreground: White
+URxvt*colorUL: yellow
+URxvt*underlineColor: yellow
+URxvt*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
+URxvt*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12
+URxvt*italicFont: xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
+URxvt*boldItalicFont: xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
+URxvt*saveLines: 0
+URxvt*buffered: true
+URxvt*hold: false
+URxvt*internalBorder:
+
+! Default and menu font
+XTerm*font:  -*-terminus-bold-*-*-*-20-*-*-*-*-*-*-*
+! "Unreadable": Leave it actually unreadable.
+!XTerm*font1: -*-terminus-bold-r-*-*-20-*-*-*-*-*-*-*
+! "Tiny"
+XTerm*font2: -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+! "Small"
+XTerm*font3: -*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
+! "Medium"
+XTerm*font4: -*-terminus-bold-*-*-*-17-*-*-*-*-*-*-*
+! "Large"
+XTerm*font5: -*-terminus-bold-*-*-*-28-*-*-*-*-*-*-*
+! "Huge"
+XTerm*font6: -*-terminus-bold-*-*-*-32-*-*-*-*-*-*-*
+
+! Colors are a matter of personal preferences.
+XTerm*background: black
+XTerm*foreground: white
