@@ -1,2 +1,3 @@
 
-fbsetroot|-foreground rgb:128/0/128 -solid rgb:128/0/128|style|:0.0
+
+$full fbsetroot|/home/dm2078/.fluxbox/styles/audax-rocks/audax-rocks.jpg|style|:0.0

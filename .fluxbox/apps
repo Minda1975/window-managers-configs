@@ -2,3 +2,19 @@
   [Position]	(WINCENTER)	{0 0}
   [Layer]	{2}
 [end]
+
+[app] (name=xterm)
+  [Deco] {BORDER}
+[end]
+
+[app] (name=transmission-gtk)
+  [Deco] {BORDER}
+[end]
+
+[app] (name=urxvt)
+  [Deco] {BORDER}
+[end]
+
+[app] (name=audacious)
+  [Deco] {BORDER}
+[end]
