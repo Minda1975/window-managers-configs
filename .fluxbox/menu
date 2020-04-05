@@ -1,0 +1,58 @@
+[begin] (fluxbox)
+[exec]   (Run..) {dmenu_run} 
+      [separator]
+      [exec] (Terminal) {urxvt} 
+      [exec] (Web Browser) {firefox-esr} 
+      [exec] (File Manager) {spacefm}
+      [exec] (Radio) {urxvt -e mplayer http://ice6.somafm.com/metal-128-mp3}
+      [separator]
+      
+[submenu] (Network)
+      [exec]   (Web) {firefox-esr} 
+      [exec]   (irssi) {urxvt -e irssi} 
+      [exec]   (torrents) {transmission-gtk} 
+      [exec]   (w3m) {urxvt -e w3m fluxbox.org} 
+[end]
+
+[submenu] (Editors)
+      [exec]   (nano) {urxvt -e nano} 
+      [exec]   (ne) {urxvt -e ne} 
+      [exec]   (vi) {urxvt -e vi} 
+[end]
+
+[submenu] (Multimedia)
+      [exec]   (alsamixer) {urxvt -e alsamixer} 
+      [exec]   (audacious) {audacious} 
+      [exec]   (alsamixergui) {alsamixergui} 
+[end]
+
+      [separator]
+      
+[submenu] (Settings)
+      [config] (Configure) 
+[submenu] (System Styles) {Choose a style...}
+      [stylesdir] (/usr/share/fluxbox/styles) 
+[end]
+[submenu] (User Styles) {Choose a style...}
+      [stylesdir] (~/.fluxbox/styles) 
+[end]
+      [workspaces] (Workspace List) 
+[submenu] (Tools)
+      [exec] (Window name) {xprop WM_CLASS|cut -d \" -f 2|xmessage -file - -center}
+      [exec] (Top) {xterm -e top}
+      [exec] (Htop) {urxvt -e htop}
+      [exec] (Appearance) {lxappearance}    
+      [exec] (Run) {fbrun} 
+      [exec] (Lock) {slock} 
+[end]
+
+      [commanddialog] (Fluxbox Command) 
+      [reconfig] (Reload config) 
+      [restart] (Restart) 
+      [exec] (About) {(fluxbox -v; fluxbox -info | sed 1d) | xmessage -file - -center} 
+[end]
+      [separator] 
+      [exit] (Exit) 
+[endencoding]
+[end]
+
