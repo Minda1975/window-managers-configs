@@ -3,7 +3,7 @@
 # You may place a similar script in $HOME/.config/openbox/autostart
 # to run user-specific things.
 #
-nitrogen --restore &
+
 # If you want to use GNOME config tools...
 #
 #if test -x /usr/lib/x86_64-linux-gnu/gnome-settings-daemon >/dev/null; then
@@ -15,3 +15,19 @@ nitrogen --restore &
 # If you want to use XFCE config tools...
 #
 #xfce-mcs-manager &
+
+setxkbmap -layout "us,lt,ru" -option "grp:ctrl_shift_toggle"
+
+fbxkb &
+
+xscreensaver -nosplash &
+
+volumeicon &
+
+connman-gtk --tray &
+
+conky &
+
+~/.config/openbox/bin/ob_stalonetray &
+
+tdc -c black -f '%d %b %H:%M' -t "Futura Bk BT" -w 90 &

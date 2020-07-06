@@ -28,20 +28,20 @@
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
        the top left corner -->
-    <monitor>Any</monitor>
+    <monitor>Primary</monitor>
     <!-- with Smart placement on a multi-monitor system, try to place new windows
-         on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
-         the active window is, 'Primary' - only on the primary monitor -->
+       on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
+       the active window is, 'Primary' - only on the primary monitor -->
     <primaryMonitor>1</primaryMonitor>
     <!-- The monitor where Openbox should place popup dialogs such as the
-         focus cycling popup, or the desktop switch popup.  It can be an index
-         from 1, specifying a particular monitor.  Or it can be one of the
-         following: 'Mouse' - where the mouse is, or
-                    'Active' - where the active window is -->
+       focus cycling popup, or the desktop switch popup.  It can be an index
+       from 1, specifying a particular monitor.  Or it can be one of the
+       following: 'Mouse' - where the mouse is, or
+                  'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Beam</name>
-    <titleLayout>NDSLIMC</titleLayout>
+    <name>Arc-Dark</name>
+    <titleLayout>LC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -53,18 +53,18 @@
       D: omnipresent (on all desktops).
   -->
     <keepBorder>yes</keepBorder>
-    <animateIconify>no</animateIconify>
+    <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Sans</name>
+      <name>Futura Bk BT</name>
       <size>10</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Sans</name>
+      <name>Futura Bk BT</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -73,8 +73,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Sans</name>
-      <size>10</size>
+      <name>Futura Bk BT</name>
+      <size>13</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -82,8 +82,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Sans</name>
-      <size>10</size>
+      <name>Futura Bk BT</name>
+      <size>13</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -91,21 +91,21 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Sans</name>
+      <name>Futura Bk BT</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Sans</name>
+      <name>Futura Bk BT</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
   </theme>
@@ -118,42 +118,38 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>2</number>
+    <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
       <!-- set names up here if you want to, like this:
-      <name>desktop 1</name>
-      <name>desktop 2</name>
-      -->
-      <name>1</name>
-      <name>2</name>
-      <name>3</name>
-      <name>4</name>
+    <name>desktop 1</name>
+    <name>desktop 2</name>
+    -->
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
-         desktops.  Set this to 0 to disable the popup. -->
+       desktops.  Set this to 0 to disable the popup. -->
   </desktops>
   <resize>
     <drawContents>yes</drawContents>
     <popupShow>Nonpixel</popupShow>
     <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
     <popupPosition>Center</popupPosition>
-    <!-- 'Center' or 'Top' -->
+    <!-- 'Center', 'Top', or 'Fixed' -->
     <popupFixedPosition>
       <!-- these are used if popupPosition is set to 'Fixed' -->
       <x>10</x>
       <!-- positive number for distance from left edge, negative number for
-           distance from right edge, or 'Center' -->
+         distance from right edge, or 'Center' -->
       <y>10</y>
       <!-- positive number for distance from top edge, negative number for
-           distance from bottom edge, or 'Center' -->
+         distance from bottom edge, or 'Center' -->
     </popupFixedPosition>
   </resize>
   <!-- You can reserve a portion of your screen where windows will not cover when
-       they are maximized, or when they are initially placed.
-       Many programs reserve space automatically, but you can use this in other
-       cases. -->
+     they are maximized, or when they are initially placed.
+     Many programs reserve space automatically, but you can use this in other
+     cases. -->
   <margins>
     <top>0</top>
     <bottom>0</bottom>
@@ -161,14 +157,14 @@
     <right>0</right>
   </margins>
   <dock>
-    <position>TopLeft</position>
+    <position>BottomRight</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
-    <floatingX>0</floatingX>
-    <floatingY>0</floatingY>
-    <noStrut>no</noStrut>
+    <floatingX>12</floatingX>
+    <floatingY>10</floatingY>
+    <noStrut>yes</noStrut>
     <stacking>Above</stacking>
     <!-- 'Above', 'Normal', or 'Below' -->
-    <direction>Vertical</direction>
+    <direction>Horizontal</direction>
     <!-- 'Vertical' or 'Horizontal' -->
     <autoHide>no</autoHide>
     <hideDelay>300</hideDelay>
@@ -181,6 +177,16 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
+    <keybind key="Super_R">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
+    </keybind>
+    <keybind key="XF86Launch5">
+      <action name="ShowMenu">
+        <menu>client-list-combined-menu</menu>
+      </action>
+    </keybind>
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
@@ -256,30 +262,17 @@
     <keybind key="A-F4">
       <action name="Close"/>
     </keybind>
-    <keybind key="A-F5">
-      <action name="Iconify"/>
-    </keybind>
-    <keybind key="A-F6">
-      <action name="ToggleMaximize"/>
+    <keybind key="W-c">
+      <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <keybind key="A-space">
+    <keybind key="W-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
-      </action>
-    </keybind>
-    <keybind key="Print">
-      <action name="Execute">
-        <command>xfce4-screenshooter</command>
-      </action>
-    </keybind>
-    <keybind key="A-Print">
-      <action name="Execute">
-        <command>scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/ ; viewnior ~/Pictures/screenshots/$f'</command>
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
@@ -301,6 +294,26 @@
         </finalactions>
       </action>
     </keybind>
+    <keybind key="A-k">
+      <action name="NextWindow">
+        <dialog>icons</dialog>
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="A-j">
+      <action name="PreviousWindow">
+        <dialog>icons</dialog>
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
     <keybind key="C-A-Tab">
       <action name="NextWindow">
         <panels>yes</panels>
@@ -312,200 +325,148 @@
         </finalactions>
       </action>
     </keybind>
+    <keybind key="W-b">
+      <action name="ToggleDecorations"/>
+    </keybind>
+    <!-- Keybindings corresponding to items in the client (W-space) menu. -->
+    <keybind key="W-r">
+      <action name="ToggleShade"/>
+    </keybind>
+    <keybind key="W-x">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="W-n">
+      <action name="Iconify"/>
+    </keybind>
+    <keybind key="W-m">
+      <action name="Move"/>
+    </keybind>
+    <keybind key="W-z">
+      <action name="Resize"/>
+    </keybind>
+    <!-- Moving the current window using a "pseudo-mode". -->
+    <keybind key="S-W-Left">
+      <action name="MoveRelative">
+        <x>-10</x>
+      </action>
+    </keybind>
+    <keybind key="S-W-Right">
+      <action name="MoveRelative">
+        <x>10</x>
+      </action>
+    </keybind>
+    <keybind key="S-W-Up">
+      <action name="MoveRelative">
+        <y>-10</y>
+      </action>
+    </keybind>
+    <keybind key="S-W-Down">
+      <action name="MoveRelative">
+        <y>10</y>
+      </action>
+    </keybind>
+    <!-- Resizing the current window using a "pseudo-mode". -->
+    <keybind key="A-W-Left">
+      <action name="ResizeRelative">
+        <right>-10</right>
+      </action>
+    </keybind>
+    <keybind key="A-W-Right">
+      <action name="ResizeRelative">
+        <right>10</right>
+      </action>
+    </keybind>
+    <keybind key="A-W-Up">
+      <action name="ResizeRelative">
+        <down>-10</down>
+      </action>
+    </keybind>
+    <keybind key="A-W-Down">
+      <action name="ResizeRelative">
+        <down>10</down>
+      </action>
+    </keybind>
+    <!-- Moving and growing to edges. -->
+    <keybind key="W-Return">
+      <action name="GrowToFill"/>
+    </keybind>
+    <keybind key="W-Home">
+      <action name="GrowToEdge">
+        <direction>west</direction>
+      </action>
+    </keybind>
+    <keybind key="W-End">
+      <action name="GrowToEdge">
+        <direction>east</direction>
+      </action>
+    </keybind>
+    <keybind key="W-Prior">
+      <action name="GrowToEdge">
+        <direction>north</direction>
+      </action>
+    </keybind>
+    <keybind key="W-Next">
+      <action name="GrowToEdge">
+        <direction>south</direction>
+      </action>
+    </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
+    <keybind key="W-Right">
       <action name="DirectionalCycleWindows">
         <direction>right</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Left">
+    <keybind key="W-Left">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Up">
+    <keybind key="W-Up">
       <action name="DirectionalCycleWindows">
         <direction>up</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Down">
+    <keybind key="W-Down">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
     </keybind>
-    <!-- Keybindings for running applications -->
-    <keybind key="A-F2">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Run Program</name>
-        </startupnotify>
-        <command>gmrun</command>
-      </action>
-    </keybind>
-    <keybind key="A-F3">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>dmenu-bind</name>
-        </startupnotify>
-        <command>~/.config/dmenu/dmenu-bind.sh</command>
-      </action>
-    </keybind>
-    <keybind key="W-f">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>File Manager</name>
-        </startupnotify>
-        <command>pcmanfm</command>
-      </action>
-    </keybind>
+    <!-- Keybindings corresponding to root menu items. -->
     <keybind key="W-t">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Terminal</name>
-        </startupnotify>
-        <command>x-terminal-emulator</command>
+        <command>~/.config/openbox/bin/ob_terminal</command>
       </action>
     </keybind>
-    <keybind key="W-w">
+    <keybind key="W-i">
       <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Web Browser</name>
-        </startupnotify>
-        <command>chromium</command>
+        <command>spacefm</command>
       </action>
     </keybind>
-    <keybind key="W-l">
+    <keybind key="W-p">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Lock screen</name>
-        </startupnotify>
-        <command>slock</command>
+        <command>~/.config/openbox/bin/ob_run</command>
       </action>
     </keybind>
-    <keybind key="W-e">
+    <keybind key="C-A-Delete">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Editor</name>
-        </startupnotify>
-        <command>geany</command>
+        <command>urxvt -e htop</command>
       </action>
     </keybind>
-    <keybind key="W-m">
+    <keybind key="Print">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Mediaplayer</name>
-        </startupnotify>
-        <command>smplayer</command>
+        <command>scrot</command>
       </action>
     </keybind>
-    <keybind key="W-h">
+    <keybind key="W-a">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>htop</name>
-        </startupnotify>
-        <command>x-terminal-emulator -T 'htop task manager' -e htop</command>
+        <command>emacs</command>
       </action>
-    </keybind>
-    <keybind key="W-v">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Files</name>
-        </startupnotify>
-        <command>xfe</command>
-      </action>
-    </keybind>
-    <!-- Keybinding for alternate menu -->
-    <keybind key="A-d">
-      <action name="Execute">
-        <command>rofi -modi run,drun -show drun</command>
-      </action>
-    </keybind>
-    <keybind key="W-x">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Logout</name>
-        </startupnotify>
-        <command>obsession-logout</command>
-      </action>
-    </keybind>
-    <keybind key="W-Escape">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>xkill</name>
-        </startupnotify>
-        <command>xkill</command>
-      </action>
-    </keybind>
-    <!-- Keybindings for menus -->
-    <keybind key="W-Tab">
-      <action name="ShowMenu">
-        <menu>client-list-combined-menu</menu>
-      </action>
-    </keybind>
-    <keybind key="W-space">
-      <action name="ShowMenu">
-        <menu>root-menu</menu>
-      </action>
-    </keybind>
-    <keybind key="A-C-q">
-      <action name="ShowMenu">
-        <menu>root-menu</menu>
-      </action>
-    </keybind>
-    <!-- A bit of tiling -->
-    <keybind key="W-Right">
-      <action name="GrowToEdgeEast"/>
-    </keybind>
-    <keybind key="W-Left">
-      <action name="GrowToEdgeWest"/>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="GrowToEdgeSouth"/>
-    </keybind>
-    <keybind key="W-Up">
-      <action name="GrowToEdgeNorth"/>
-    </keybind>
-    <keybind key="W-A-Left">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <width>50%</width>
-        <x>0</x>
-        <y>0</y>
-      </action>
-    </keybind>
-    <keybind key="W-A-Right">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <width>50%</width>
-        <x>-0</x>
-        <y>0</y>
-      </action>
-    </keybind>
-    <keybind key="A-r">
-      <action name="Resize"/>
-    </keybind>
-    <keybind key="A-m">
-      <action name="Move"/>
     </keybind>
   </keyboard>
   <mouse>
-    <dragThreshold>8</dragThreshold>
+    <dragThreshold>1</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
-    <doubleClickTime>200</doubleClickTime>
+    <doubleClickTime>500</doubleClickTime>
     <!-- in milliseconds (1000 = 1 second) -->
     <screenEdgeWarpTime>400</screenEdgeWarpTime>
     <!-- Time before changing desktops when the pointer touches the edge of the
@@ -515,75 +476,46 @@
     <!-- Set this to TRUE to move the mouse pointer across the desktop when
        switching due to hitting the edge of the screen -->
     <context name="Frame">
-      <mousebind button="A-Left" action="Press">
+      <mousebind button="W-Left" action="Press">
         <action name="Focus"/>
         <action name="Raise"/>
       </mousebind>
-      <mousebind button="A-Left" action="Click">
+      <mousebind button="W-Left" action="Click">
         <action name="Unshade"/>
       </mousebind>
-      <mousebind button="A-Left" action="Drag">
+      <mousebind button="W-Left" action="Drag">
         <action name="Move"/>
       </mousebind>
-      <mousebind button="A-Right" action="Press">
+      <mousebind button="W-Right" action="Press">
         <action name="Focus"/>
         <action name="Raise"/>
         <action name="Unshade"/>
       </mousebind>
-      <mousebind button="A-Right" action="Drag">
+      <mousebind button="W-Right" action="Drag">
         <action name="Resize"/>
       </mousebind>
-      <mousebind button="A-Middle" action="Press">
+      <mousebind button="W-Middle" action="Press">
         <action name="Lower"/>
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
       </mousebind>
-      <mousebind button="A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-S-Up" action="Click">
+      <mousebind button="W-S-Up" action="Click">
         <action name="SendToDesktop">
           <to>previous</to>
         </action>
       </mousebind>
-      <mousebind button="A-S-Down" action="Click">
+      <mousebind button="W-S-Down" action="Click">
         <action name="SendToDesktop">
           <to>next</to>
         </action>
       </mousebind>
     </context>
     <context name="Titlebar">
-      <mousebind button="Left" action="Press">
-        <action name="Focus"/>
-        <action name="Raise"/>
-      </mousebind>
       <mousebind button="Left" action="Drag">
         <action name="Move"/>
       </mousebind>
       <mousebind button="Left" action="DoubleClick">
-        <action name="ToggleMaximize"/>
-      </mousebind>
-      <mousebind button="Middle" action="Press">
-        <action name="Lower"/>
-        <action name="FocusToBottom"/>
-        <action name="Unfocus"/>
+        <action name="ToggleShade"/>
       </mousebind>
       <mousebind button="Up" action="Click">
         <action name="if">
@@ -603,13 +535,6 @@
             <action name="Unshade"/>
             <action name="Raise"/>
           </then>
-        </action>
-      </mousebind>
-      <mousebind button="Right" action="Press">
-        <action name="Focus"/>
-        <action name="Raise"/>
-        <action name="ShowMenu">
-          <menu>client-menu</menu>
         </action>
       </mousebind>
     </context>
@@ -633,11 +558,6 @@
       </mousebind>
     </context>
     <context name="Top">
-      <mousebind button="Left" action="Press">
-        <action name="Focus"/>
-        <action name="Raise"/>
-        <action name="Unshade"/>
-      </mousebind>
       <mousebind button="Left" action="Drag">
         <action name="Resize">
           <edge>top</edge>
@@ -645,10 +565,6 @@
       </mousebind>
     </context>
     <context name="Left">
-      <mousebind button="Left" action="Press">
-        <action name="Focus"/>
-        <action name="Raise"/>
-      </mousebind>
       <mousebind button="Left" action="Drag">
         <action name="Resize">
           <edge>left</edge>
@@ -656,10 +572,6 @@
       </mousebind>
     </context>
     <context name="Right">
-      <mousebind button="Left" action="Press">
-        <action name="Focus"/>
-        <action name="Raise"/>
-      </mousebind>
       <mousebind button="Left" action="Drag">
         <action name="Resize">
           <edge>right</edge>
@@ -667,19 +579,10 @@
       </mousebind>
     </context>
     <context name="Bottom">
-      <mousebind button="Left" action="Press">
-        <action name="Focus"/>
-        <action name="Raise"/>
-      </mousebind>
       <mousebind button="Left" action="Drag">
         <action name="Resize">
           <edge>bottom</edge>
         </action>
-      </mousebind>
-      <mousebind button="Middle" action="Press">
-        <action name="Lower"/>
-        <action name="FocusToBottom"/>
-        <action name="Unfocus"/>
       </mousebind>
       <mousebind button="Right" action="Press">
         <action name="Focus"/>
@@ -799,49 +702,23 @@
       </mousebind>
     </context>
     <context name="Desktop">
-      <mousebind button="Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
       <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+      <mousebind button="Right" action="Press">
         <action name="Focus"/>
         <action name="Raise"/>
       </mousebind>
     </context>
     <context name="Root">
       <!-- Menus -->
-      <mousebind button="Middle" action="Press">
+      <mousebind button="Right" action="Press">
         <action name="ShowMenu">
           <menu>client-list-combined-menu</menu>
         </action>
       </mousebind>
-      <mousebind button="Right" action="Press">
+      <mousebind button="Left" action="Press">
         <action name="ShowMenu">
           <menu>root-menu</menu>
         </action>
@@ -858,12 +735,12 @@
           <to>next</to>
         </action>
       </mousebind>
-      <mousebind button="A-Up" action="Click">
+      <mousebind button="W-Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
         </action>
       </mousebind>
-      <mousebind button="A-Down" action="Click">
+      <mousebind button="W-Down" action="Click">
         <action name="GoToDesktop">
           <to>next</to>
         </action>
@@ -874,9 +751,8 @@
     <!-- You can specify more than one menu file in here and they are all loaded,
        just don't make menu ids clash or, well, it'll be kind of pointless -->
     <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
-    <!-- system menu files on Debian systems
+    <!-- system menu files on Debian systems -->
     <file>/var/lib/openbox/debian-menu.xml</file>
-    <file>debian-menu.xml</file> -->
     <file>menu.xml</file>
     <hideDelay>200</hideDelay>
     <!-- if a press-release lasts longer than this setting (in milliseconds), the
@@ -893,12 +769,15 @@
        entry in parent menu
        if this is a negative value, then the delay is infinite and the
        submenu will not be hidden until a different submenu is opened -->
-    <applicationIcons>yes</applicationIcons>
+    <showIcons>yes</showIcons>
     <!-- controls if icons appear in the client-list-(combined-)menu -->
     <manageDesktops>yes</manageDesktops>
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
+    <application name="stalonetray">
+      <desktop>all</desktop>
+    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
@@ -907,6 +786,8 @@
 
   <application name="the window's _OB_APP_NAME property (see obxprop)"
               class="the window's _OB_APP_CLASS property (see obxprop)"
+          groupname="the window's _OB_APP_GROUP_NAME property (see obxprop)"
+         groupclass="the window's _OB_APP_GROUP_CLASS property (see obxprop)"
                role="the window's _OB_APP_ROLE property (see obxprop)"
               title="the window's _OB_APP_TITLE property (see obxprop)"
                type="the window's _OB_APP_TYPE property (see obxprob)..
@@ -925,7 +806,7 @@
   # order that they appear in this list
 
 
-    # each rule element can be left out or set to 'default' to specify to not
+    # each rule element can be left out or set to 'default' to specify to not 
     # change that attribute of the window
 
     <decor>yes</decor>
@@ -942,13 +823,24 @@
       # applications who refuse to behave
       <x>center</x>
       # a number like 50, or 'center' to center on screen. use a negative number
-      # to start from the right (or bottom for <y>), ie -50 is 50 pixels from the
-      # right edge (or bottom).
+      # to start from the right (or bottom for <y>), ie -50 is 50 pixels from
+      # the right edge (or bottom). use 'default' to specify using value
+      # provided by the application, or chosen by openbox, instead.
       <y>200</y>
       <monitor>1</monitor>
       # specifies the monitor in a xinerama setup.
       # 1 is the first head, or 'mouse' for wherever the mouse is
     </position>
+
+    <size>
+      # the size to make the window.
+      <width>20</width>
+      # a number like 20, or 'default' to use the size given by the application.
+      # you can use fractions such as 1/2 or percentages such as 75% in which
+      # case the value is relative to the size of the monitor that the window
+      # appears on.
+      <height>30%</height>
+    </size>
 
     <focus>yes</focus>
     # if the window should try be given focus when it appears. if this is set
@@ -979,33 +871,6 @@
   </application>
 
   # end of the example
--->
-    <!--
-    <application class="Gimp" name="gimp" role="gimp-toolbox" type="utility">
-      <maximized>vertical</maximized>
-    </application>
-    <application class="Gimp" name="gimp" role="gimp-dock" type="utility">
-      <maximized>vertical</maximized>
-    </application>
-    <application class="Gimp" name="gimp" role="gimp-image-window" type="normal">
-      <position force="no">
-        <x>center</x>
-        <y>center</y>
-      </position>
-    </application>
-
-    <application class="Gimp" name="gimp-2.8" role="gimp-toolbox" type="utility">
-      <maximized>vertical</maximized>
-    </application>
-    <application class="Gimp" name="gimp-2.8" role="gimp-dock" type="utility">
-      <maximized>vertical</maximized>
-    </application>
-    <application class="Gimp" name="gimp-2.8" role="gimp-image-window" type="normal">
-      <position force="no">
-        <x>center</x>
-        <y>center</y>
-      </position>
-    </application>
 -->
   </applications>
 </openbox_config>

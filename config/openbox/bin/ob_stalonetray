@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+stalonetray -bg '#e7e8eb' --grow-gravity E --icon-gravity E --slot-size 32 --window-strut none --dockapp-mode simple
