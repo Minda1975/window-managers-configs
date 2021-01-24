@@ -1,0 +1,2 @@
+#!/bin/sh
+notify-send "`date "+%T%n%d %A %Y"`"
