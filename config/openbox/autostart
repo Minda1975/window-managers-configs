@@ -16,18 +16,10 @@
 #
 #xfce-mcs-manager &
 
-setxkbmap -layout "us,lt,ru" -option "grp:ctrl_shift_toggle"
-
-fbxkb &
+setxkbmap -layout "us,lt,ru" -option "grp:menu_toggle"
 
 xscreensaver -nosplash &
 
-volumeicon &
+feh --bg-fill Pictures/Wall/wall.png
 
-connman-gtk --tray &
 
-conky &
-
-~/.config/openbox/bin/ob_stalonetray &
-
-tdc -c black -f '%d %b %H:%M' -t "Futura Bk BT" -w 90 &

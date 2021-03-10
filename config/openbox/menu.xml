@@ -4,10 +4,9 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://openbox.org/
                 file:///usr/share/openbox/menu.xsd">
-
 <menu id="root-menu" label="Openbox 3">
   <item label="Terminal emulator">
-    <action name="Execute"><execute>x-terminal-emulator</execute></action>
+    <action name="Execute"><execute>xterm</execute></action>
   </item>
   <item label="Web browser">
     <action name="Execute"><execute>x-www-browser</execute></action>
@@ -30,7 +29,7 @@
   <item label="Exit">
     <action name="Exit" />
   </item>
-  <separator/>
+<separator/>
   <menu id="root-menu-29326" label="Goodbay">
   <item label="Obsession">
    <action name="Execute">
