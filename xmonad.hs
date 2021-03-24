@@ -1,27 +1,26 @@
-import XMonad hiding ( (|||) )  -- don't use the normal ||| operator
-import XMonad.Layout.LayoutCombinators   -- use the one from LayoutCombinators instead
+import XMonad
+import XMonad.Config.Desktop
 import XMonad.Util.EZConfig  -- add keybindings easily
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Groups.Examples
-import XMonad.Layout.SimplestFloat
+import XMonad.Layout.Spiral
 
 
-main = xmonad myConfig
-
-myConfig = def {
+main = 
+  xmonad $ desktopConfig {
   --                     
-  layoutHook = smartBorders $ rowOfColumns ||| simplestFloat
-  , terminal = "urxvtc"
+  layoutHook = smartBorders $ rowOfColumns ||| spiral (6/7)
+  , terminal = "alacritty"
   , modMask  = mod4Mask
   , normalBorderColor  = "#cccccc"
   , focusedBorderColor = "#ff69b4"
   , borderWidth = 2
   } `additionalKeysP`
-  [ ("M-<F1>",         sendMessage $ JumpToLayout "SimplestFloat")
-  , ("M-M1-<Left>",    zoomWindowOut)
+  [ ("M-M1-<Left>",    zoomWindowOut)
   , ("M-M1-C-<Right>", zoomWindowIn)
   , ("M-M1-C-<Up>",    zoomWindowReset)
   , ("M-M1-C-<Down>",  toggleWindowFull)
+  , ("M-S-p", spawn "rofi -combi-modi window,run -show combi -modi combi")
   ]
     
                                                 
