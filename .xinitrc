@@ -8,7 +8,7 @@ xautolock -time 10 -locker 'i3lock' &
 
 compton -b &
 
-feh --bg-fill Pictures/Wall/115.png
+feh --randomize --no-fehbg --bg-scale Pictures/Wall/*
 
 udiskie -A &
 
