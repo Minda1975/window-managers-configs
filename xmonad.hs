@@ -2,24 +2,21 @@ import XMonad
 import XMonad.Config.Desktop
 import XMonad.Util.EZConfig  -- add keybindings easily
 import XMonad.Layout.NoBorders
-import XMonad.Layout.Groups.Examples
-import XMonad.Layout.Spiral
+import XMonad.Layout.FixedColumn
+import XMonad.Layout.Dishes
 
 
 main = 
   xmonad $ desktopConfig {
   --                     
-  layoutHook = smartBorders $ rowOfColumns ||| spiral (6/7)
+  layoutHook = smartBorders $ Full ||| FixedColumn 1 20 80 10 ||| Dishes 2 (1/6) 
   , terminal = "alacritty"
   , modMask  = mod4Mask
-  , normalBorderColor  = "#cccccc"
-  , focusedBorderColor = "#ff69b4"
+  , normalBorderColor  = "#0d0c12"
+  , focusedBorderColor = "#46A4BA"
   , borderWidth = 2
   } `additionalKeysP`
-  [ ("M-M1-<Left>",    zoomWindowOut)
-  , ("M-M1-C-<Right>", zoomWindowIn)
-  , ("M-M1-C-<Up>",    zoomWindowReset)
-  , ("M-M1-C-<Down>",  toggleWindowFull)
+  [ ("M-S-f",    spawn "firefox-esr")
   , ("M-S-p", spawn "rofi -combi-modi window,run -show combi -modi combi")
   ]
     
