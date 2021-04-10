@@ -1,18 +1,17 @@
 ! XTerm
 
-XTerm*background:        #222D31
-XTerm*foreground:        #d8d8d8
-XTerm*pointerColor:      #1ABB9B
-XTerm*faceName:          JetBrains Mono
+XTerm*background:        #000000
+XTerm*foreground:        #ffffff
+XTerm*faceName:          Terminus
 XTerm*faceSize:          11
 
 
 
 !UXTerm
-UXTerm*faceName: JetBrains Mono
+UXTerm*faceName: Terminus
 UXTerm*faceSize: 10
-UXTerm*background:        #222D31
-UXTerm*foreground:        #d8d8d8
+UXTerm*background:        #000000
+UXTerm*foreground:        #ffffff
 UXTerm*dynamicColors:      true
 UXTerm*utf8:               2
 UXTerm*eightBitInput:      true
@@ -25,4 +24,11 @@ UXTerm*jumpScroll:         true
 UXTerm*multiScroll:        true
 UXTerm*toolBar:            false
 
+! Urxvt
 
+URxvt.depth: 32
+URxvt.background:	rgba:0000/0000/0200/c800
+URxvt.foreground:	#ffffff
+URxvt.font: -misc-fixed-medium-r-normal--13-120-75-*-c-80-iso8859-16 
+URxvt.scrollBar:	false
+URxvt.saveLines:	65535

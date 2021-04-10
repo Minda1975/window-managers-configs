@@ -1,6 +1,12 @@
-xrdb ~/.Xresources
+# Statusbar loop
+#while true; do
+ #  xsetroot -name "$( date +"%F %R" )"
+  # sleep 1m    # Update time every minute
+#done &
 
-xsetroot -cursor_name left_ptr
+
+#Start up progs
+xrdb ~/.Xresources
 
 setxkbmap -layout "us,lt,ru" -option "grp:menu_toggle"
 
@@ -8,10 +14,10 @@ xautolock -time 10 -locker 'i3lock' &
 
 compton -b &
 
-feh --randomize --no-fehbg --bg-scale Pictures/Wall/*
+feh --bg-fill Pictures/wallpapers/blade.jpeg
 
-udiskie -A &
+udiskie &
 
 dunst &
 
-exec xmonad
+exec spectrwm
