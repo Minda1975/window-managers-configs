@@ -1,56 +1,66 @@
-Xft.dpi:       96
-Xft.antialias: true
-Xft.hinting:   true
-Xft.rgba:      rgb
-Xft.autohint:  false
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
-
+URxvt.font: xft:Monospace:size=10
+URxvt.scrollBar: false
 
 
 !Xterm
-XTerm*faceName:          MesloLGS NF
+XTerm*faceName:          Monospace
 XTerm*faceSize:          11
 XTerm*selectToClipboard: true
 
-! special
-*.foreground:   #DBD0DC
-*.background:   #030610
-*.cursorColor:  #DBD0DC
 
-! black
-*.color0:       #010106
-*.color8:       #373b41
+! Base16 Gruvbox dark, medium
+! Scheme: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
-! red
-*.color1:       #911B1C
-*.color9:       #911B1C
+#define base00 #282828
+#define base01 #3c3836
+#define base02 #504945
+#define base03 #665c54
+#define base04 #bdae93
+#define base05 #d5c4a1
+#define base06 #ebdbb2
+#define base07 #fbf1c7
+#define base08 #fb4934
+#define base09 #fe8019
+#define base0A #fabd2f
+#define base0B #b8bb26
+#define base0C #8ec07c
+#define base0D #83a598
+#define base0E #d3869b
+#define base0F #d65d0e
 
-! green
-*.color2:       #458453
-*.color10:      #458453
+*.foreground:   base05
+#ifdef background_opacity
+*.background:   [background_opacity]base00
+#else
+*.background:   base00
+#endif
+*.cursorColor:  base05
 
-! yellow
-*.color3:       #AC4E29
-*.color11:      #CC9713
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
 
-! blue
-*.color4:       #6081B0
-*.color12:      #579AFE
+*.color8:       base03
+*.color9:       base09
+*.color10:      base01
+*.color11:      base02
+*.color12:      base04
+*.color13:      base06
+*.color14:      base0F
+*.color15:      base07
 
-! magenta
-*.color5:       #850683
-*.color13:      #EC26EF
 
-! cyan
-*.color6:       #59938F
-*.color14:      #59938F
 
-! white
-*.color7:       #DBD0DC
-*.color15:      #DBD0DC
+
+
+
 
 !UXTerm
-UXTerm*faceName: MesloLGS NF
+UXTerm*faceName: Monospace
 UXTerm*faceSize: 10
 
