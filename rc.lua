@@ -50,10 +50,10 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "xresources/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "mlterm"
+terminal = "terminator"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -132,23 +132,11 @@ cpurate = wibox.widget.textbox()
 cpurate : set_font("mono 10")
 cpurate : set_forced_width(480)
 vicious.register(cpurate,vicious.widgets.cpu,
-'<span background="#000000" color="#ffff00">ALL: $1% '..
-'<span background="#222222" color="#ffcc00">'..
+'<span background="#222222" color="#cccccc">ALL: $1% '..
+'<span background="#444444" color="#000000">'..
 '1:$2%  2:$3%  3:$4%  4:$5%  5:$6%  6:$7%  7:$8%  8:$9%  '..
 '</span></span>',1)
---_Volume
-volume = wibox.widget.textbox()
-volume : set_font("mono 10")
-vicious.register(volume,vicious.widgets.volume,
-'<span color="#cc88cc">$2$1% </span>',nil,"Master")
---_Memory
-memwidget = wibox.widget.textbox()
-memwidget : set_font("mono 10")
-memwidget : set_forced_width(280)
-vicious.register(memwidget,vicious.widgets.mem,
-'<span background="#000000" color="#00ff00">MEM:$1% '..
-'<span background="#222222" color="#44ff00">Used:$2MB Free:$4MB '..
-'</span></span> ',1)
+
 -- Create a textclock widget
 --mytextclock = wibox.widget.textclock()
 --_Date&Time
@@ -262,12 +250,8 @@ awful.screen.connect_for_each_screen(function(s)
 	    spacer,
 	    cpurate,
 	    spacer,
-	    volume,
-	    spacer,
 	    mykeyboardlayout,
 	    wibox.widget.systray(),
-	    spacer,
-	    memwidget,
 	    spacer,
 	    datewidget,
             --mytextclock,
