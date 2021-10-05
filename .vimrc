@@ -62,3 +62,6 @@ set t_Co=256
 syntax enable
 set number relativenumber
 let g:rehash256 = 1
+let g:lightline = {
+          \ 'colorscheme': 'wombat',
+      \ }
