@@ -63,5 +63,5 @@ syntax enable
 set number relativenumber
 let g:rehash256 = 1
 let g:lightline = {
-          \ 'colorscheme': 'wombat',
+          \ 'colorscheme': 'nord',
       \ }

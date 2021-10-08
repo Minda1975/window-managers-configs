@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Load resources
+
+xrdb -merge .Xresources
+
+
+setxkbmap -layout "us,lt,ru" -option "grp:menu_toggle"
+
+wal -R
+
+picom --config ~/.config/picom/picom.conf &
+
+exec xmonad

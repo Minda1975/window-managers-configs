@@ -3,10 +3,8 @@
 autoload -Uz promptinit
 promptinit
 # prompt adam1
-
-# A super-fast, zero-distractions, no-nonsense prompt string.
-PS1="
-%F{red}%~%f> "
+PROMPT='%F{2}%n%f@%F{5}%m%f %F{4}%B%~%b%f %# '
+RPROMPT='[%F{3}%?%f]'
 
 setopt histignorealldups sharehistory
 
@@ -40,5 +38,18 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-source /usr/share/doc/fzf/examples/completion.zsh
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# Not supported in the "fish" shell.
+(cat ~/.cache/wal/sequences &)
+
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh
 source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+
+# append
+path+=('/home/azg256/.local/bin')
+path+=('/home/azg256/.emacs.d/bin')
+export PATH
