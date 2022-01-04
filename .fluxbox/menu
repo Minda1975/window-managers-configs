@@ -1,32 +1,38 @@
 [begin] (fluxbox)
-[exec]   (Run..) {dmenu_run} 
+[exec]   (Run..) {fbrun} 
       [separator]
-      [exec] (Terminal) {urxvt} 
+      [exec] (Terminal) {terminator} 
       [exec] (Web Browser) {firefox-esr} 
-      [exec] (File Manager) {spacefm}
-      [exec] (Radio) {urxvt -e mplayer http://ice6.somafm.com/metal-128-mp3}
+      [exec] (File Manager) {pcmanfm}
+      [exec] (Music) {gmpc}
       [separator]
       
 [submenu] (Network)
       [exec]   (Web) {firefox-esr} 
-      [exec]   (irssi) {urxvt -e irssi} 
-      [exec]   (torrents) {transmission-gtk} 
-      [exec]   (w3m) {urxvt -e w3m fluxbox.org} 
+      [exec]   (Qutebrowser) {qutebrowser} 
+      [exec]   (Torrents) {transmission-gtk} 
+      [exec]   (Claws Mail) {claws-mail} 
 [end]
 
 [submenu] (Editors)
-      [exec]   (nano) {urxvt -e nano} 
-      [exec]   (ne) {urxvt -e ne} 
-      [exec]   (vi) {urxvt -e vi} 
+      [exec]   (Nano) {xterm -e nano} 
+      [exec]   (Vi) {xterm -e vi} 
 [end]
 
 [submenu] (Multimedia)
-      [exec]   (alsamixer) {urxvt -e alsamixer} 
-      [exec]   (audacious) {audacious} 
-      [exec]   (alsamixergui) {alsamixergui} 
+      [exec]   (Volume) {pavucontrol} 
+      [exec]   (VLC) {vlc} 
+      [exec]   (Celluloid) {celluloid} 
 [end]
 
       [separator]
+
+[submenu] (Office)
+      [exec]   (Libreoffice) {libreoffice}
+      [exec]   (Gimp) {gimp}
+      [exec]   (Mirage) {mirage}
+[end]
+
       
 [submenu] (Settings)
       [config] (Configure) 
@@ -40,10 +46,11 @@
 [submenu] (Tools)
       [exec] (Window name) {xprop WM_CLASS|cut -d \" -f 2|xmessage -file - -center}
       [exec] (Top) {xterm -e top}
-      [exec] (Htop) {urxvt -e htop}
+      [exec] (Htop) {xterm -e htop}
       [exec] (Appearance) {lxappearance}    
-      [exec] (Run) {fbrun} 
-      [exec] (Lock) {slock} 
+      [exec] (Lock) {i3lock}
+      [exec] (Packages) {synaptic-pkexec}
+      [exec] (Aptitude) {xterm -e aptitude} 
 [end]
 
       [commanddialog] (Fluxbox Command) 

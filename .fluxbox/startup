@@ -5,10 +5,7 @@
 # Lines starting with a '#' are ignored.
 
 # Change your keymap:
-#xmodmap "/home/dm2078/.Xmodmap"
-
-setxkbmap -layout "us,lt,ru" -option "grp:ctrl_shift_toggle"
-(sleep 2; fbxkb) &
+# xmodmap "/home/azg256/.Xmodmap"
 
 # Applications you want to run with fluxbox.
 # MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
@@ -29,6 +26,23 @@ fi
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
 
-exec fluxbox
+# exec fluxbox
 # or if you want to keep a log:
-# exec fluxbox -log "/home/dm2078/.fluxbox/log"
+# exec fluxbox -log "/home/azg256/.fluxbox/log"
+
+fluxbox &
+fbpid=$!
+
+sleep 1
+{
+   # Applications you want to run after fluxbox has started
+   # MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN & AT THE END.
+   setxkbmap -layout "us,lt,ru" -option "grp:menu_toggle"
+   /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+   fbxkb &
+   nm-applet &
+   pasystray &
+   gkrellm -w &
+} &
+
+wait $fbpid
