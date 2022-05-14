@@ -85,3 +85,32 @@ Type^2 (in-package :stumpwm)^n in Slime REPL." *port-number*))))
 ;; Module
 (load-module "kbd-layouts")
 (kbd-layouts:keyboard-layout-list "us" "lt" "ru")
+
+;; Set up workspaces
+(run-commands
+  "gnewbg term"
+  "gnew dev"
+  "gnewbg web"
+  "gnewbg media")
+  
+
+;; Set mode line colors
+(setf *mode-line-background-color* "#232635")
+(setf *mode-line-foreground-color* "#A6Accd")
+
+;; Set modeline
+(setf *window-format* "%m%n%s%c")
+(setf *screen-mode-line-format* (list "[^B%n^b] %W^>%d"))
+(setf *time-modeline-string* "%a %b %e %k:%M")
+(setf *mode-line-timeout* 2)
+(enable-mode-line (current-screen) (current-head) t)
+
+;;; -- Window Placement Rules --
+
+(define-frame-preference "web"
+    (0 T T :class "Firefox-esr"))
+
+(define-frame-preference "dev"
+      (0 T T :class "Emacs"))
+  
+  
