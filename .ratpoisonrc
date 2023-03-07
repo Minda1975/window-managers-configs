@@ -1,9 +1,7 @@
+set startupmessage 0
 set winname title
 set winfmt %n %s %t
-set msgwait 3
-set font "Monospace-8"
-set fgcolor #C898DC
-set bgcolor #000000
+set msgwait 5
 set winliststyle column
 set rudeness 12
 set warp on
@@ -13,8 +11,5 @@ set padding 0 0 0 0
 set barpadding 0 0 
 unbind c 
 bind c exec urxvt
-definekey top s-F1 exec ~/.scripts/shutdown.sh
-
-
-
-
+alias uptime exec ratpoison -c "echo $(uptime)"
+bind e uptime
