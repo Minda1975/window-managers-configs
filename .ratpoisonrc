@@ -1,15 +1,20 @@
 set startupmessage 0
-set winname title
-set winfmt %n %s %t
-set msgwait 5
-set winliststyle column
-set rudeness 12
-set warp on
-addhook key banish
-set border 0 
-set padding 0 0 0 0
-set barpadding 0 0 
+
+set border 2
+set bgcolor black
+set fgcolor green
+set infofmt (%H, %W) %n(%c - %a) -- PID: %p, XWID: %i
+set font unifont
+set fwcolor green
+set bwcolor #343434
+
 unbind c 
-bind c exec urxvt
+bind c exec st
 alias uptime exec ratpoison -c "echo $(uptime)"
 bind e uptime
+bind C exec rofi -show drun
+
+alias reload exec ratpoison -c "source $HOME/.ratpoisonrc"
+alias sensors exec ratpoison -c "echo $(sensors)"
+alias toggle-borders exec if [ "$(ratpoison -c 'set border')" -ge 1 ]; then ratpoison -c 'set border 0'; else ratpoison -c 'set border 1'; fi
+
