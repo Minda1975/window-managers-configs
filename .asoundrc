@@ -1,9 +1,9 @@
 pcm.!default {
-    type hw
-    card Headset
+   type hw
+   card Device
 }
 
 ctl.!default {
-    type hw
-    card Headset
+   type hw
+   card Device
 }

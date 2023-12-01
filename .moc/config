@@ -160,8 +160,8 @@
 #
 #    ALSADevice=tee:hw,'/tmp/out.wav',wav
 #
-#ALSADevice = default
-ALSAMixer1 = Headphone
+ALSADevice = default
+ALSAMixer1 = Speaker
 #ALSAMixer2 = Master
 
 # Under some circumstances on 32-bit systems, audio played continously
