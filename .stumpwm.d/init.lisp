@@ -7,16 +7,6 @@
 ;; Set message
 (setq *startup-message* "^5Lisp ^2^bsystem operational.")
 
-(ql:quickload :slynk)
-
-(stumpwm:defcommand sly-start-server () ()
-  "Start a slynk server for sly."
-  (sb-thread:make-thread (lambda () (slynk:create-server :dont-close t))))
-
-(stumpwm:defcommand sly-stop-server () ()
-  "Stop current slynk server for sly."
-  (sb-thread:make-thread (lambda () (slynk:stop-server 4005))))
-
 ;; Startup
 (stumpwm:run-shell-command
  "xsetroot -cursor_name left_ptr")
@@ -25,12 +15,15 @@
   "exec import -window root png:$HOME/screenshot_$(date +%F_%H-%M-%S).png")
 
 ;; Termit
-(define-key *root-map* (kbd "C") "exec termit")
+(define-key *root-map* (kbd "C") "exec rofi -show drun")
 
 ; Module
 (load-module "kbd-layouts")
 (kbd-layouts:keyboard-layout-list "us" "lt" "ru")
 
+(load-module "stump-lock")
+(setf stump-lock:*password* "ogis")
+(define-key *top-map* (kbd "s-l") "lock-screen")
 
 ;; window name format (truncate name after 20 letters)
 (setf *window-format* "%m%n%s%20t")

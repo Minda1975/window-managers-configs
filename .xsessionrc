@@ -1,15 +1,17 @@
 #!/bin/bash
 
-hsetroot -solid black
+#hsetroot -solid black
 
-setxkbmap -layout "us,lt,ru" -option "grp:alt_shift_toggle"
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
-xsetroot -cursor_name left_ptr
+#setxkbmap -layout "us,lt,ru" -option "grp:alt_shift_toggle"
+
+#xsetroot -cursor_name left_ptr
 
 
-xautolock -time 10 -locker "i3lock-fancy" &
+#xautolock -time 10 -locker "i3lock-fancy" &
 
 
-exec emacs
+exec stumpwm
 
-#exec stumpwm
+#exec emacs
