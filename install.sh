@@ -58,7 +58,7 @@ sudo apt install -y qbittorrent
 sudo apt install -y gimp
 
 #Dev
-sudo apt install -y autoconf build-essential curl texinfo
+sudo apt install -y autoconf build-essential curl texinfo python3-venv rofi
 
 sudo apt autoremove
 
