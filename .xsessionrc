@@ -1,17 +1,18 @@
 #!/bin/bash
 
-#hsetroot -solid black
+xsetroot -cursor_name left_ptr
+
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+
+nvidia-settings -a 'AllowFlipping=0'
+
+picom --backend glx --xrender-sync-fence &
+
 
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
-#setxkbmap -layout "us,lt,ru" -option "grp:alt_shift_toggle"
+setxkbmap -layout "us,lt,ru" -option "grp:alt_shift_toggle"
 
-#xsetroot -cursor_name left_ptr
-
-
-#xautolock -time 10 -locker "i3lock-fancy" &
-
-
-exec stumpwm
+wal -R
 
 #exec emacs

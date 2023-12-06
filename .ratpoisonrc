@@ -1,0 +1,5 @@
+definekey top Print exec scrot
+bind Print exec scrot
+bind C exec rofi -show drun
+
+exec wmname LG3D
