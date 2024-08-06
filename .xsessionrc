@@ -1,18 +1,16 @@
-#!/bin/bash
+xscreensaver -nosplash &
 
-xsetroot -cursor_name left_ptr
+stalonetray &
 
-nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+dex -a
 
-nvidia-settings -a 'AllowFlipping=0'
+#lxpolkit &
 
-picom --backend glx --xrender-sync-fence &
+#stalonetray --dockapp-mode wmaker --slot-size 32 --geometry 2x2 --parent-bg --scrollbars none &
 
+#gxkb &
 
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+xbackdrop -c navyblue
 
-setxkbmap -layout "us,lt,ru" -option "grp:alt_shift_toggle"
+#exec emwm
 
-wal -R
-
-#exec emacs
