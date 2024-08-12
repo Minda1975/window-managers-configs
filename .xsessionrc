@@ -1,16 +1,13 @@
+#!/bin/bash
+
+#xsetroot -solid grey10
+
 xscreensaver -nosplash &
 
-stalonetray &
+#(sleep 5; trayer --edge top --align right --SetDockType true --SetPartialStrut true) &
 
-dex -a
+(sleep 7; gxkb) &
 
-#lxpolkit &
+exec jwm
 
-#stalonetray --dockapp-mode wmaker --slot-size 32 --geometry 2x2 --parent-bg --scrollbars none &
-
-#gxkb &
-
-xbackdrop -c navyblue
-
-#exec emwm
-
+#exec openbox
