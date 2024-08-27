@@ -1,4 +1,44 @@
-XTerm.vt100.renderFont: false
-XTerm.vt100.font: -*-fixed-*-r-normal-ko-18-120-100-100-c-180-iso10646-1
+! XTerm
+XTerm*background:         black
+XTerm*foreground:         white
+XTerm*cursorColor:        white
+XTerm*VT100.geometry:     80x25
+XTerm*faceName:           xft:Terminus:size=12:antialias=false:style=Regular
+XTerm*dynamicColors:      true
+XTerm*utf8:               2
+XTerm*eightBitInput:      false
+XTerm*saveLines:          4096
+XTerm*scrollKey:          true
+XTerm*scrollTtyOutput:    false
+XTerm*scrollBar:          true
+XTerm*rightScrollBar:     true
+XTerm*jumpScroll:         true
+XTerm*multiScroll:        true
+XTerm*toolBar:            false
+XTerm*selectToClipboard:  true
+XTerm*loginShell:         true
+XTerm*backarrowKey: false
+XTerm*ttyModes: erase ^?
 
 
+! UXTerm
+UXTerm*background:         black
+UXTerm*foreground:         white
+UXTerm*cursorColor:        white
+UXTerm*VT100.geometry:     90x30
+UXTerm*faceName:           xft:Terminus:size=10:antialias=false:style=Regular
+UXTerm*dynamicColors:      true
+UXTerm*utf8:               2
+UXTerm*eightBitInput:      false
+UXTerm*saveLines:          4096
+UXTerm*scrollKey:          true
+UXTerm*scrollTtyOutput:    false
+UXTerm*scrollBar:          true
+UXTerm*rightScrollBar:     true
+UXTerm*jumpScroll:         true
+UXTerm*multiScroll:        true
+UXTerm*toolBar:            false
+UXTerm*selectToClipboard:  true
+UXTerm*loginShell:         true
+UXTerm*backarrowKey: false
+UXTerm*ttyModes: erase ^?
